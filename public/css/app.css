@@ -46,7 +46,7 @@
   text-decoration: none;
   text-transform: uppercase;
   margin-left: 1.5rem;
-  padding-bottom: 2rem;
+  padding-bottom: 2.9rem;
   color: black;
 }
 #site_header .cont_header .menu a:hover {
@@ -55,8 +55,6 @@
 }
 #site_header .cont_header .menu a:hover span {
   color: #008cff;
-  font-size: 10px;
-  vertical-align: middle;
 }
 #site_header .cont_header .search {
   display: flex;
@@ -67,7 +65,7 @@
   font-size: 14px;
   padding-left: 0.2rem;
 }
-#site_header .cont_header .search:hover p {
+#site_header .cont_header .search p {
   font-size: 14px;
   padding-left: 60px;
   border-bottom: 2px solid #008cff;
