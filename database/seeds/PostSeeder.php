@@ -13,16 +13,16 @@ class PostSeeder extends Seeder
     public function run()
     {
         //
-         $posts = config('db.comics');
+         $series = config('db');
 
-        foreach ($posts as $post) {
-            $_post = new Post();
-            $_post->title = $post['title'];
-            $_post->description = $post['description'];
-            $_post->thumb = $post['thumb'];
-            $_post->price = $post['price'];
-            $_post->series = $post['series'];
-            $_post->save();
+        foreach ($series as $serie) {
+            $_serie = new serie();
+            $_serie->title = $serie['title'];
+            $_serie->description = $serie['description'];
+            $_serie->thumb = $serie['thumb'];
+            $_serie->price = $serie['price'];
+            $_serie->series = $serie['series'];
+            $_serie->save();
         }
         
     }
