@@ -2,17 +2,18 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\New;
+use App\Models\Article;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class NewController extends Controller
+class ArticleController extends Controller
 {
     //
     // Mostra lista di risorse
     public function index()
     {
-        
+        $articles = Article::paginate(6);
+        return view('admin.articles.index', compact('articles'));
     }
 
     // Mostra form per creare nuova risorsa
@@ -28,26 +29,26 @@ class NewController extends Controller
     }
 
     // Mostra la singlola risorsa
-    public function show(Post $post)
+    public function show(Article $post)
     {
         
     }
 
     // Mostra un form per modificare la risorsa
-    public function edit(Post $post)
+    public function edit(Article $post)
     {
         
     }
 
     // Aggiorniamo la risorda nel database
-    public function update(Request $request, Post $post)
+    public function update(Request $request, Article $post)
     {
         
 
     }
 
     // Cancello la risorsa
-    public function destroy(Post $post)
+    public function destroy(Article $post)
     {
        
 

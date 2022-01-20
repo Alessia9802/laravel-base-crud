@@ -21,22 +21,22 @@ Route::get('/', function () {
 
 Route::get('/', 'PostController@index' )->name('welcome');
 
-/* News */
+/* articles */
 
 // Mostra lista di risorse
-Route::get('admin/news', 'Admin\NewController@index')->name('admin.news.index');
+Route::get('admin/articles', 'Admin\ArticleController@index')->name('admin.articles.index');
 // Mostra form per creare nuova risorsa
-Route::get('admin/news/create', 'Admin\NewController@create')->name('admin.news.create');
+Route::get('admin/articles/create', 'Admin\ArticleController@create')->name('admin.articles.create');
 // Salvo nel database la risorsa
-Route::post('admin/news', 'Admin\NewController@store')->name('admin.news.store');
+Route::post('admin/articles', 'Admin\ArticleController@store')->name('admin.articles.store');
 // Mostra la singlola risorsa
-Route::get('admin/news/{new}', 'Admin\NewController@show')->name('admin.news.show');
+Route::get('admin/articles/{article}', 'Admin\ArticleController@show')->name('admin.articles.show');
 // Mostra un form per modificare la risorsa
-Route::get('admin/news/{new}/edit', 'Admin\NewController@edit')->name('admin.news.edit');
+Route::get('admin/articles/{article}/edit', 'Admin\ArticleController@edit')->name('admin.articles.edit');
 // Aggiorniamo la risorda nel database
-Route::put('admin/news/{new}', 'Admin\NewController@update')->name('admin.news.update');
+Route::put('admin/articles/{article}', 'Admin\ArticleController@update')->name('admin.articles.update');
 // Cancello la risorsa
-Route::delete('admin/news/{new}', 'Admin\NewController@destroy')->name('admin.news.destroy');
+Route::delete('admin/articles/{article}', 'Admin\ArticleController@destroy')->name('admin.articles.destroy');
 
 Route::get('/characters', function () {
     return view('characters');
@@ -46,9 +46,11 @@ Route::get('/comics', function () {
     return view('comics');
 })->name('comics');
 
-Route::get('/movies', function () {
+/* Route::get('/movies', function () {
     return view('movies');
-})->name('movies');
+})->name('movies'); */
+
+Route::resource('movies', 'MovieController');
 
 Route::get('/tv', function () {
     return view('tv');
