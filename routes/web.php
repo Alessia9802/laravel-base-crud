@@ -19,6 +19,25 @@ Route::get('/', function () {
     return view('welcome', compact('series'));
 })->name('welcome');
 
+Route::get('/', 'PostController@index' )->name('welcome');
+
+/* News */
+
+// Mostra lista di risorse
+Route::get('admin/news', 'Admin\NewController@index')->name('admin.news.index');
+// Mostra form per creare nuova risorsa
+Route::get('admin/news/create', 'Admin\NewController@create')->name('admin.news.create');
+// Salvo nel database la risorsa
+Route::post('admin/news', 'Admin\NewController@store')->name('admin.news.store');
+// Mostra la singlola risorsa
+Route::get('admin/news/{new}', 'Admin\NewController@show')->name('admin.news.show');
+// Mostra un form per modificare la risorsa
+Route::get('admin/news/{new}/edit', 'Admin\NewController@edit')->name('admin.news.edit');
+// Aggiorniamo la risorda nel database
+Route::put('admin/news/{new}', 'Admin\NewController@update')->name('admin.news.update');
+// Cancello la risorsa
+Route::delete('admin/news/{new}', 'Admin\NewController@destroy')->name('admin.news.destroy');
+
 Route::get('/characters', function () {
     return view('characters');
 })->name('characters');
