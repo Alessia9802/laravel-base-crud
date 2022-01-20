@@ -46,11 +46,11 @@ Route::get('/comics', function () {
     return view('comics');
 })->name('comics');
 
-/* Route::get('/movies', function () {
+Route::get('/movies', function () {
     return view('movies');
-})->name('movies'); */
+})->name('movies'); 
 
-Route::resource('movies', 'MovieController');
+/* Route::resource('movies', 'MovieController'); */
 
 Route::get('/tv', function () {
     return view('tv');

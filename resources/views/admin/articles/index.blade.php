@@ -79,7 +79,7 @@
         </tbody>
     </table>
 
-    {{$posts->links()}}
+    {{$articles->links()}}
 </div>
 
 @endsection

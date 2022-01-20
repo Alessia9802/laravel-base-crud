@@ -8,18 +8,18 @@
         <img src="{{asset('img/dc-logo.png')}}" alt="dc logo">
          </div>
     <nav class="menu">
-        <a class="nav-link" href="{{ route('characters') }}">characters</a>
-        <a class="nav-link" href="{{ route('comics') }}">comics</a>
-        <a class="nav-link " href="{{ route('movies') }}">movies</a>
-        <a class="nav-link " href="{{ route('tv') }}">tv</a>
-        <a class="nav-link " href="{{ route('games') }}">games</a>
-        <a class="nav-link " href="{{ route('collectibles') }}">collectibles</a>
-        <a class="nav-link " href="{{ route('videos') }}">videos</a>
-        <a class="nav-link " href="{{ route('fans') }}">fans</a>
-        <a class="nav-link " href="{{ route('news') }}">news</a>
-        <a class="nav-link " href="{{ route('shop') }}">shop <span>&#9660;</span> </a>
+        <a href="{{ route('characters') }}">characters</a>
+        <a href="{{ route('comics') }}">comics</a>
+        <a href="{{ route('movies') }}">movies</a>
+        <a href="{{ route('tv') }}">tv</a>
+        <a href="{{ route('games') }}">games</a>
+        <a href="{{ route('collectibles') }}">collectibles</a>
+        <a href="{{ route('videos') }}">videos</a>
+        <a href="{{ route('fans') }}">fans</a>
+        <a href="{{ route('news') }}">news</a>
+        <a href="{{ route('shop') }}">shop <span>&#9660;</span> </a>
     </nav>
-    <div class="search">
+    <div class="search_bar">
         <p>Search <span><i class="fas fa-search"></i></span> </p>
        
     </div>
