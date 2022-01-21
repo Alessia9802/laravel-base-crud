@@ -11435,8 +11435,9 @@ textarea.form-control-lg {
 .section {
   display: flex;
   justify-content: space-between;
-  padding-left: 200px;
-  padding-right: 200px;
+  padding-left: 140px;
+  padding-right: 140px;
+  height: 500px;
 }
 
 h2 {
@@ -11459,6 +11460,10 @@ h2 {
 .menu_dc_comics > nav ul li {
   list-style: none;
 }
+.menu_dc_comics > nav ul li h3 {
+  color: white;
+  font-size: 20px;
+}
 
 .menu_dc_comics ul li a {
   text-decoration: none;
@@ -11474,6 +11479,10 @@ h2 {
 .menu_shop > nav ul li {
   list-style: none;
 }
+.menu_shop > nav ul li h3 {
+  color: white;
+  font-size: 20px;
+}
 
 .menu_shop ul li a {
   text-decoration: none;
@@ -11484,6 +11493,10 @@ h2 {
 
 .menu_dc > nav ul li {
   list-style: none;
+}
+.menu_dc > nav ul li h3 {
+  color: white;
+  font-size: 20px;
 }
 
 .menu_dc ul li a {
@@ -11496,6 +11509,10 @@ h2 {
 .menu_sites > nav ul li {
   list-style: none;
 }
+.menu_sites > nav ul li h3 {
+  color: white;
+  font-size: 20px;
+}
 
 .menu_sites ul li a {
   text-decoration: none;
@@ -11505,15 +11522,18 @@ h2 {
 }
 
 .logo_footer {
-  width: 400px;
+  width: 500px;
   height: 400px;
-  z-index: 1;
+  background-repeat: no-repeat;
+  background-size: 400px;
+  background-size: 500px;
+  background-position: center;
+  background-image: url(../img/dc-logo-bg.png);
 }
 
 .logo_footer > .logo {
   width: 400px;
   height: 400px;
-  margin-top: -50px;
 }
 
 .copyright {

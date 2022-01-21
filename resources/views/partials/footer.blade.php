@@ -2,9 +2,11 @@
  <div class="section">
       <div class="menu_footer">
         <div class="menu_dc_comics">
-          <h2>DC Comics</h2>
+          
           <nav class="comics">
+            
             <ul>
+              <li><h3>DC COMICS</h3></li>
               <li><a href="#">Characters</a></li>
               <li><a href="#">Comics</a></li>
               <li><a href="#">Movies</a></li>
@@ -15,9 +17,11 @@
             </ul>
           </nav>
           <div class="menu_shop">
-            <h2>Shop</h2>
+            
             <nav>
+              
               <ul>
+                <li><h3>SHOP</h3></li>
                 <li><a href="#">Shop DC</a></li>
                 <li><a href="#">Shop DC Collectibles</a></li>
               </ul>
@@ -25,9 +29,10 @@
           </div>
         </div>
         <div class="menu_dc">
-          <h2>Dc</h2>
+          
           <nav>
             <ul>
+              <li><h3>DC</h3></li>
               <li><a href="#">Terms Of Use</a></li>
               <li><a href="#">Privacy Policy(New)</a></li>
               <li><a href="#">Ad Choises</a></li>
@@ -43,9 +48,11 @@
           </nav>
         </div>
         <div class="menu_sites">
-          <h2>Sites</h2>
+         
           <nav>
+             
             <ul>
+              <li><h3>SITES</h3></li>
               <li><a href="#">DC</a></li>
               <li><a href="#">MAD Magazine</a></li>
               <li><a href="#">DC Kids</a></li>
@@ -56,11 +63,11 @@
         </div>
       </div>
       <div class="logo_footer">
-        <img
+        <!-- <img
           class="logo"
           src="{{asset('img/dc-logo-bg.png')}}"
           alt=""
-        />
+        /> -->
       </div>
     </div>
     <div class="copyright">
