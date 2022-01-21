@@ -1,5 +1,6 @@
 <header id="site_header">
     <div class="top_nav">
+        <a href="{{ route('admin.articles.index') }}">Admin</a>
         <p class="visa">DC POWER℠ VISA®</p>
         <p class="add">additional dc sites &#9660;</p>
     </div>
