@@ -36,7 +36,7 @@
                 <td>{{$article->created_at}}</td>
                 <td>{{$article->updated_at}}</td>
                 <td>
-                    <a class="btn btn-primary" title="View post" href="{{route('admin.articles.show', $article->id)}}"><i class="fas fa-eye"></i> </a>
+                    <a class="btn btn-primary" title="View article" href="{{route('admin.articles.show', $article->id)}}"><i class="fas fa-eye"></i> </a>
 
                     <a class="btn btn-secondary" href="{{route('admin.articles.edit', $article->id)}}"> <i class="fas fa-pencil-alt"></i> </a>
 
