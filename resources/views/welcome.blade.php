@@ -13,7 +13,7 @@
         <div class="cont_comics">
 
             <div class="image_wrap">
-                <img class="card" src="{{ $serie['thumb'] }}" alt="">
+                <img class="card_comics" src="{{ $serie['thumb'] }}" alt="">
                 <h5 class="card_title">{{ $serie['title'] }}</h5>
 
             </div>

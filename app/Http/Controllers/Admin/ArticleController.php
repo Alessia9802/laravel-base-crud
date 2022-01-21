@@ -19,13 +19,23 @@ class ArticleController extends Controller
     // Mostra form per creare nuova risorsa
     public function create()
     {
-        
+        return view('admin.articles.create');
     }
 
     // Salvo nel database la risorsa
     public function store(Request $request)
     {
         
+        //ddd($request->all());
+        //ddd($request->title);
+        // Senza validazione
+         $article = new Article();
+        $article->title = $request->title;
+        $article->body = $request->body;
+        $article->save(); 
+
+        // POST / REDIRECT / GET
+        return redirect()->route('admin.articles.index');
     }
 
     // Mostra la singlola risorsa
