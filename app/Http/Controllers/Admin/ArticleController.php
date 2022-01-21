@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Models\Article;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class ArticleController extends Controller
 {
@@ -25,14 +26,20 @@ class ArticleController extends Controller
     // Salvo nel database la risorsa
     public function store(Request $request)
     {
+        $validated_data = $request->validate([
+            'title' => 'required|unique:articles',
+            'body' => 'nullable'
+        ]);
+
+        Article::create($validated_data);
         
         //ddd($request->all());
         //ddd($request->title);
         // Senza validazione
-         $article = new Article();
+        /* $article = new Article();
         $article->title = $request->title;
         $article->body = $request->body;
-        $article->save(); 
+        $article->save();  */
 
         // POST / REDIRECT / GET
         return redirect()->route('admin.articles.index');
