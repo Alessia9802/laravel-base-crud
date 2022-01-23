@@ -30,6 +30,7 @@
         </thead>
         <tbody>
             @foreach($articles as $article)
+           
             <tr>
                 <td scope="row">{{$article->id}}</td>
                 <td>{{$article->title}}</td>

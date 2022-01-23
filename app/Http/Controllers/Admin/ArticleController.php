@@ -78,7 +78,8 @@ class ArticleController extends Controller
     // Cancello la risorsa
     public function destroy(Article $article)
     {
-       
+       $article->delete();
+        return redirect()->route('admin.articles.index')->with('message', '😱 Hai rimosso un articolo per sempre!! Sei fregato!');
 
     }
 
