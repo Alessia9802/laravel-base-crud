@@ -39,7 +39,7 @@
             <li>
                 <a href="{{route('admin.articles.index')}}" class="nav-link text-white">
                     <i class="fas fa-thumbtack fa-lg fa-fw"></i>
-                    Posts
+                    Articles
                 </a>
             </li>
             <li>
@@ -48,6 +48,13 @@
                     Games
                 </a>
             </li>
+            <li>
+                <a href="{{route('admin.characters.index')}}" class="nav-link text-white">
+                    <i class="fas fa-mask fa-lg fa-fw"></i>
+                    Characters
+                </a>
+            </li>
+
             
 
         </ul>

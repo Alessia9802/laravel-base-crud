@@ -41,6 +41,25 @@ Route::delete('admin/articles/{article}', 'Admin\ArticleController@destroy')->na
 Route::get('/characters', function () {
     return view('characters');
 })->name('characters');
+Route::get('characters/{character}', 'CharacterController@show');
+/* Characters Routes - Admin */
+
+// Mostra lista di risorse
+Route::get('admin/characters', 'Admin\CharacterController@index')->name('admin.characters.index');
+// Mostra form per creare nuova risorsa
+Route::get('admin/characters/create', 'Admin\CharacterController@create')->name('admin.characters.create');
+// Salvo nel database la risorsa
+Route::post('admin/characters', 'Admin\CharacterController@store')->name('admin.characters.store');
+// Mostra la singola risorsa
+Route::get('admin/characters/{character}', 'Admin\CharacterController@show')->name('admin.characters.show');
+// Mostra un form per modificare la risorsa
+Route::get('admin/characters/{character}/edit', 'Admin\CharacterController@edit')->name('admin.characters.edit');
+// Aggiorniamo la risorsa nel database
+Route::put('admin/characters/{character}', 'Admin\CharacterController@update')->name('admin.characters.update');
+// Cancello la risorsa
+Route::delete('admin/characters/{character}', 'Admin\CharacterController@destroy')->name('admin.characters.destroy');
+
+/* /Characters */
 
 Route::get('/comics', function () {
     return view('comics');
