@@ -29,11 +29,11 @@ Route::get('admin/articles', 'Admin\ArticleController@index')->name('admin.artic
 Route::get('admin/articles/create', 'Admin\ArticleController@create')->name('admin.articles.create');
 // Salvo nel database la risorsa
 Route::post('admin/articles', 'Admin\ArticleController@store')->name('admin.articles.store');
-// Mostra la singlola risorsa
+// Mostra la singola risorsa
 Route::get('admin/articles/{article}', 'Admin\ArticleController@show')->name('admin.articles.show');
 // Mostra un form per modificare la risorsa
 Route::get('admin/articles/{article}/edit', 'Admin\ArticleController@edit')->name('admin.articles.edit');
-// Aggiorniamo la risorda nel database
+// Aggiorniamo la risorsa nel database
 Route::put('admin/articles/{article}', 'Admin\ArticleController@update')->name('admin.articles.update');
 // Cancello la risorsa
 Route::delete('admin/articles/{article}', 'Admin\ArticleController@destroy')->name('admin.articles.destroy');
@@ -56,9 +56,39 @@ Route::get('/tv', function () {
     return view('tv');
 })->name('tv');
 
-Route::get('/games', function () {
+/* Route::get('/games', function () {
     return view('games');
+})->name('games'); */
+
+/* GAMES Routes - GUEST */
+
+/* Dashboard */
+Route::view('admin', 'admin.dashboard')->name('admin');
+
+Route::get('/games', function () {
+    /* return view('movies'); */
+    return 'Games Page';
 })->name('games');
+Route::get('games/{game}', 'GameController@show');
+
+/* Games Routes - Admin */
+
+// Mostra lista di risorse
+Route::get('admin/games', 'Admin\GameController@index')->name('admin.games.index');
+// Mostra form per creare nuova risorsa
+Route::get('admin/games/create', 'Admin\GameController@create')->name('admin.games.create');
+// Salvo nel database la risorsa
+Route::post('admin/games', 'Admin\GameController@store')->name('admin.games.store');
+// Mostra la singola risorsa
+Route::get('admin/games/{game}', 'Admin\GameController@show')->name('admin.games.show');
+// Mostra un form per modificare la risorsa
+Route::get('admin/games/{game}/edit', 'Admin\GameController@edit')->name('admin.games.edit');
+// Aggiorniamo la risorsa nel database
+Route::put('admin/games/{game}', 'Admin\GameController@update')->name('admin.games.update');
+// Cancello la risorsa
+Route::delete('admin/games/{game}', 'Admin\GameController@destroy')->name('admin.games.destroy');
+
+/* /Games */
 
 Route::get('/collectibles', function () {
     return view('collectibles');
